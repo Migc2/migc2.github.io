@@ -1,110 +1,398 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>boing comics</title>
-    <link rel="icon"  href="img/iconos/iconoweb.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-    
-    
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon"  href="img/icons/nft.png"/>
+<title>Warehouse World</title>
 
 </head>
 <body>
-    <div class="portada">
-        
-        <header class="cabezado">
-            <div class="texthead">
-            <p> Mientras tanto en internet......</p>
-            <p >¡UN NUEVO ESPACIO DE COMICS APARECIÓ!</p>
+    <div class="container">
+        <!-- inserto en esta zona superior el logotipo -->  
+        <div class="row">
+            <div class="col-8 ">
+                <img src="img/icons/logo.svg">
             </div>
-            
-            <a href="" target="_blank" title="registrate o entra"><img  src="img/iconos/persona.svg">Mi cuenta</a>
+        </div>
+        <!-- Aquí empieza el navbar -->        
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                      
+                        <!-- estos serían los botones que nos llevarian al resto de paginas -->  
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark mx-2 my-2 my-xm-0 text-white" role="button" href="market.html">
+                                    Market
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link btn btn-dark mx-2 my-2 my-xm-0 text-white" role="button" href="publicar.html">
+                                Publicar
+                            </a>
+                            </li>
+                        </ul>
+                        
+                      <form class="form-inline my-2 my-lg-0">
+                            <!--cuadro de texto donde buscariamos dentro de la web -->  
+                            <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search">
 
-        </header>
+                            <!-- boton de iniciar una sesion que desplegaria un modal para poder iniciar sesión -->  
+                            <button type="button" class="btn btn-outline-light x-2 my-2 my-sm-0" data-toggle="modal" data-target="#loginuser" data-whatever="@mdo">
+                                Iniciar sesión
+                            </button>
 
-        <div class="logo">
-            <img id=subir src="img/fondo/logodeweb.svg" alt="svg">
+                            <!-- aqui se encuentra la sección que da funcionalidad al modal de inicio de sesión --> 
+                            <div class="modal fade" id="loginuser" tabindex="-1" role="dialog" aria-labelledby="loginuser" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <!-- la cabecera del modal desplegable --> 
+                                      <h5 class="modal-title" id="loginuser">
+                                          Iniciar sesión
+                                        </h5>
+                                        <!-- boton que nos permite cerrar el modal --> 
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                      <form action="contacto.php" method="POST">
+                                          <!-- cuadro de texto basado en formulario para el email, tiene una expresión regular--> 
+                                        <div class="form-group my-2">
+                                          <label for="recipient-name" class="col-form-label mx-2">email </label>
+                                          <input type="text" class="form-control" id="recipient-name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                        </div>
+
+                                        <!-- cuadro de texto para la contraseña, tiene una expresión regular --> 
+                                        <div class="form-group my-2">
+                                          <label for="message-text" class="col-form-label mx-2">contraseña </label>
+                                          <input type="text" class="form-control" id="recipient-name" pattern="[A-Za-z0-9!?-]{4,8}" required>
+                                        </div>
+                                      </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                      <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <!-- boton para registrarse en la web, no tiene ninguna funcionalidad -->  
+                            <button class="btn btn-outline-light mx-2 my-2 my-sm-0 bg-danger" type="submit">
+                                registrarse
+                            </button>
+                      </form>
+                    </div>
+                  </nav>
+            </div>
+
         </div>
 
-        <div class="contenido">
+        <div class="row">
+            <div class="col-12 col-lg-8 my-3">
+                <!-- esto es el carousel de imagenes pincipal -->  
+                <div id="carouselwwweb" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselwwweb" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselwwweb" data-slide-to="1"></li>
+                      <li data-target="#carouselwwweb" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        
+                        <!-- aqui se inserta la imagen de los monos en el carousel-->  
+                      <div class="carousel-item active">
+                            <a href="#" target="_blank" title="Colección monos">
+                                <img class="d-block w-100" src="img/pictures/bored-apes.jpg" alt="First slide">
+                            </a>
+                            <div class="carousel-caption d-none d-md-block bg-dark">
+                                <h5>
+                                    Nuevos monos
+                                </h5>
+                                <p>
+                                    Comprate un monete Raúl, que estan tirados de precio
+                                </p>
+                            </div>
+                      </div>
 
-        
-            <main>
-                
-                <ul>
-                        <li>
-                            <a href="novedades.html" target="_blank" title="ultimas cosas publicadas"><img  src="img/iconos/boom.png">Novedades</a>
-                        </li>
-                        <li>
-                            <a href="noticias.html" target="_blank" title="noticias del mundillo"><img  src="img/iconos/periodico.png">Noticias</a>
-                        </li>
-                        <li>
-                            <a href="comics.html" target="_blank" title="busca algo en concreto"><img  src="img/iconos/comic.png">Comics</a>
-                        </li>
-                        <li>
-                            <a href="foro.html" target="_blank" title="lugar de encuentro"><img  src="img/iconos/megaphone.png">Foro</a>
-                        </li>
-                        <li>
-                            <a href="tienda.html" target="_blank" title="compra!! compra!!"><img  src="img/iconos/shopping-cart.png">Tienda</a>
-                        </li>
-                </ul>
-                    
-                
-                
-                
-                <figure class="imgportada">
-                    
-                    <h1>¡¡En portada!!</h1>
-                    <article>
-                        <h3>Transmetropolitan</h3>
-                        <img  src="img/imagenes/transmetro.jpg">
-                        <p>descubre la obra irreverente y atemporal de Warren Ellis.</p>
-                    </article>
-                    <hr size="5px" color="black"/>
-                    <article>
-                        <h3>Marvel y el cine</h3>
-                        <img  src="img/imagenes/marveluniverse.jpg">
-                        <p>Como disney sigue exprimiendo su gallina de los huevos de oro.</p>
-                    </article>
-                    <hr size="5px" color="black"/>
-                    <a href="#subir" style="text-decoration:none" title="tirale parriba"><img  src="img/iconos/up-arrow.png" alt="png">subir</a>
-               
-                </figure>
-                
-                
-                
-                
-            </main>
-            
-           
+                        <!-- aqui se inserta la imagen urban-->  
+                      <div class="carousel-item">
+                            <a href="#" target="_blank" title="colección Urban">
+                                <img class="d-block w-100" src="img/pictures/urban.jpg" alt="Second slide">
+                            </a>
+                            <div class="carousel-caption d-none d-md-block bg-dark">
+                                <h5>
+                                    Estilo urbano
+                                </h5>
+                                <p>
+                                    nueva colección inspirada en tribus urbanas
+                                </p>
+                            </div>
+                      </div>
+
+                        <!-- aqui se inserta la imagen de gente -->  
+                      <div class="carousel-item">
+                            <a href="#" target="_blank" title="colección gente">
+                                <img class="d-block w-100" src="img/pictures/Bearded.jpg" alt="Third slide">
+                            </a>
+                            <div class="carousel-caption d-none d-md-block bg-dark">
+                                <h5>
+                                    Gente random
+                                </h5>
+                                <p>
+                                    una colección inspirada en cualquier chorrada
+                                </p>
+                            </div>
+                      </div>
+                    </div>
+
+                    <!-- esto seria el boton previo del carousel -->
+                    <a class="carousel-control-prev" href="#carouselwwweb" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">
+                          Previo
+                        </span>
+                    </a>
+
+                    <!-- esto seria el boton siguiente del carousel -->
+                    <a class="carousel-control-next" href="#carouselwwweb" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">
+                          Siguiente
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- en esta zona introduzco una par de imagenes enlaces que nos llevaria a unos hipotéticos articulos de informacion -->
+            <div class="col-12 col-lg-4 my-3">
+                <div class="row">
+
+                    <div class="col-12 col-md-6 col-lg-12">
+                        <a href="#" target="_blank" title="Problemas con los nfts">
+                            <img src="img/pictures/problems.jpg">
+                        </a>
+                        <p>
+                            ¿Problemas con los NTFs?
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-12">
+                        <a href="#" target="_blank" title="trabajo del futuro">
+                            <img src="img/pictures/trabajo.png">
+                        </a>
+                        <p>
+                            ¿NFTs el trabajo del futuro?
+                        </p>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <footer>
-            <p>Siguenos en redes:</p>
 
-            <div class="redes">
+        <!-- apartir de aquí comienza una sección de ntfs populares,
+        se muestran el pagina principal para incitar a los posibles compradores se hagan con ellas -->
+        <div class="row">
+            <div class="col-12 col-lg-6 banner bg-primary">
+                <div class="h1">
+                    Los mas populares
+                </div> 
                 
-                <ul>
-                    <li>
-                        <a title="google" href="#"><img src="img/iconos/google+.png" alt="google"></a>
-                    </li>
-                    <li>
-                        <a title="facebook" href="#"><img src="img/iconos/facebook.png" alt="facebook"></a>
-                    </li>
-                    <li>
-                        <a title="twitter" href="#"><img src="img/iconos/twitter.png" alt="twitter"></a>
-                    </li>
-                </ul>
+            </div>
+        </div> 
+
+        <div class="row">
+
+            <!-- cada elmento a la venta de la sección poulares se muestra dentro de un div clase card -->
+            <div class="col-6 col-md-3 my-3">
+                <!-- en este card header se muestra el nombre de la conlección a la que pertenece -->
+                <div class="card-header text-white bg-primary h5">
+                    Monsters
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <!-- aquí se introduce la imagen del nft, funcionaria como hipotético enlace que nos llevaria a su ubicacion dentro de market -->
+                        <div class="col-7 m-2">
+                            <a href="#" target="_blank" title="Monsters">
+                            <img class="card-img-top" src="img/nftimg/monster/monster.png" alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="col-12 m-2">
+                            <div class="card-block">
+                                <!-- esto seria el nombre del autor del nft -->
+                                <h6>
+                                    Fulanito
+                                </h6>
+                                <!-- el coste de la adquisición del nft -->
+                                <p>
+                                    3000€/5000 Cyptotokens
+                                </p>
+                                <!-- un botón que nos llevaria a la compra del ntf -->
+                                <button type="button" class="btn btn-danger p-md-2">
+                                    Comprar
+                                    <!-- este badge esta incluido dentro del botón de compra, 
+                                        nos indica las unidades que quedarian disponibles e incitar al comprador para que lo compre -->
+                                    <span class="badge badge-light">
+                                        Stock: 1
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="contacto">
-            <a href="contacto.html" target="_blank">contacto</a>
+            <!-- este seria un segundo elemento a la venta de los mas populares -->
+            <div class="col-6 col-md-3 my-3">
+                <div class="card-header text-white bg-primary h5">
+                    Rabbits
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-7 m-2">
+                            <a href="#" target="_blank" title="Conejos">
+                                <img class="card-img-top" src="img/nftimg/rabbit.png" alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="col-12 m-2">
+                            <div class="card-block"> 
+                                <h6>
+                                    Fulgencio
+                                </h6>
+                                <p>
+                                    500€/100 Cyptotokens
+                                </p>
+                                <button type="button" class="btn btn-danger p-md-2">
+                                    Comprar 
+                                    <span class="badge badge-light">
+                                        Stock: 3
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
+
+            <!-- este seria un tercer elemento a la venta de los mas populares -->
+            <div class="col-6 col-md-3 my-3">
+                <div class="card-header text-white bg-primary h5">
+                    Womans
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-7 m-2">
+                            <a href="#" target="_blank" title="Womans">
+                                <img class="card-img-top" src="img/nftimg/woman.png" alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="col-12 m-2">
+                            <div class="card-block"> 
+                                <h6>
+                                    Menganica
+                                </h6>
+                                <p>
+                                    2000€/235 Cyptotokens
+                                </p>
+                                <button type="button" class="btn btn-danger p-md-2">
+                                    Comprar 
+                                    <span class="badge badge-light">
+                                        Stock: 4
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- este seria un cuarto elemento a la venta de los mas populares -->
+            <div class="col-6 col-md-3 my-3">
+                <div class="card-header text-white bg-primary h5">
+                    Robotos
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-7 m-2">
+                            <a href="#" target="_blank" title="Robots">
+                                <img class="card-img-top" src="img/nftimg/robbot/robbo.jpg" alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="col-12 m-2">
+                            <div class="card-block"> 
+                                <h6>
+                                    Cetanica
+                                </h6>
+                                <p>
+                                    3000€/5000 Cyptotokens
+                                </p>
+                                <button type="button" class="btn btn-danger p-md-2">
+                                    Comprar 
+                                    <span class="badge badge-light">
+                                        Stock: 2
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+
+        <!-- la zona del footer, no incluye mucho -->
+        <footer class="row">
+            <div class="col text-center banner bg-primary">
+                <p>
+                    NFTs Warehouse World 2021
+                </p>
+                <div class="w-100 d-block" >
+                    <div class="row">
+                        <div class="col-4 offset-4 mb-2">
+                            <div class="row">
+                                <!-- un enlace con icono que nos llevaria a la pagina de facebook -->
+                                <div class="col-4 col-md-2 offset-md-3 ">
+                                    <a href="#" target="_blank" title="Facebook">
+                                        <img src="img/icons/facebook.png">
+                                    </a>
+                                </div>
+                                <!-- un enlace con icono que nos llevaria a la pagina de twitter -->
+                                <div class="col-4 col-md-2">
+                                    <a href="#" target="_blank" title="twitter">
+                                        <img src="img/icons/twitter.png">
+                                    </a>
+                                </div>
+                                <!-- un enlace con icono que nos llevaria a la pagina de youtube -->
+                                <div class="col-4 col-md-2 ">
+                                    <a href="#" target="_blank" title="Youtube">
+                                        <img src="img/icons/youtube.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </footer> 
+
     </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
 </html>

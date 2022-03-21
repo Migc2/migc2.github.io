@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon"  href="img/icons/nft.png"/>
+<title>Warehouse World: Market</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- logotipo -->  
+        <div class="row">
+            <div class="col-8">
+                <img src="img/icons/logo.svg">
+            </div>
+        </div>
+        <!-- Aquí empieza el navbar -->
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                      
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark mx-2 my-2 my-xm-0 text-white" role="button" title="página de inicio" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link btn btn-dark mx-2 my-2 my-xm-0 text-white" role="button" title="página para publicar" href="publicar.html">Publicar</a>
+                            </li>
+                        </ul>
+                        
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search">
+                        
+                        <button type="button" class="btn btn-outline-light x-2 my-2 my-sm-0" data-toggle="modal" data-target="#loginuser" data-whatever="@mdo">
+                            Iniciar sesión
+                        </button>
+
+                        <div class="modal fade" id="loginuser" tabindex="-1" role="dialog" aria-labelledby="loginuser" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    
+                                  <h5 class="modal-title" id="loginuser">
+                                      Iniciar sesión
+                                    </h5>
+                                    
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+
+                                <div class="modal-body">
+                                  <form action="contacto.php" method="POST">
+                        
+                                    <div class="form-group my-2">
+                                      <label for="recipient-name" class="col-form-label mx-2">
+                                          email 
+                                        </label>
+                                      <input type="text" class="form-control" id="recipient-name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                    </div>
+
+
+                                    <div class="form-group my-2">
+                                      <label for="message-text" class="col-form-label mx-2">
+                                          contraseña 
+                                        </label>
+                                      <input type="text" class="form-control" id="recipient-name" pattern="[A-Za-z0-9!?-]{4,8}" required>
+                                    </div>
+                                  </form>
+                                </div>
+
+                                <div class="modal-footer">
+                                  <button type="submit" class="btn btn-primary">
+                                      Iniciar sesión
+                                    </button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline-light mx-2 my-2 my-sm-0 bg-danger" type="submit">
+                            registrarse
+                        </button>
+                      </form>
+                    </div>
+                  </nav>
+            </div>
+
+        </div>
+
+        <!-- aquí empieza el contenido de market --> 
+        <div class="row">
+            <div class="col-12 my-5">
+                <div class="h1" id="marketplace">
+                    Market Place
+                    <!-- el boton dropdown con las diferentes seciones para visitar --> 
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Buscar por
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#des">
+                              Destacados
+                            </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#rob">
+                              Robots
+                            </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#mon">
+                              monsters
+                            </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#cry">
+                              Crystal
+                            </a>
+                          
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            
+
+        </div>
+
+        <!-- el primer apartado con los más destacados --> 
+        <div class="row">
+            <div class="col-6 banner bg-primary">
+                <div class="h1" id="des">
+                    destacados
+                </div>   
+            </div>
+        </div> 
+        <!-- cada elemento de la colección estará dentro de un card--> 
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/rabbit.png" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/woman.png" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/alien.jpg" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 my-3 d-none d-lg-block d-sm-none">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/Imperfect.jpg" alt="Card image cap">
+                    </a>
+                <div class="card-block p-2">
+                    <h6>
+                        Cetanica
+                    </h6>
+                    <p>
+                        3000€/5000 Cyptotokens
+                    </p>
+                    <button type="button" class="btn btn-danger">
+                            Comprar 
+                        <span class="badge badge-light">
+                            Stock: 2
+                        </span>
+                    </button>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- primera colección --> 
+        <div class="row">
+            <div class="col-5 banner bg-primary">
+                <div class="h1" id="rob">
+                    Robots       
+                </div> 
+            </div>
+            <!-- pequeño botón que nos llevara hacia el comienzo--> 
+            <div class="col-2 col-md-1 banner bg-primary">
+                <a class="btn btn-light text-right my-2" title="sube para arriba!" href="#marketplace" role="button">UP!</a> 
+            </div>
+        </div> 
+
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="robot">
+                        <img class="card-img-top" src="img/nftimg/robbot/robbo.jpg" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Robot">
+                        <img class="card-img-top" src="img/nftimg/robbot/robo2.jpg" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger" disabled>
+                            Comprar 
+                            <span class="badge badge-light">
+                                VENDIDO
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Robot">
+                        <img class="card-img-top" src="img/nftimg/robbot/robbo3.jpg" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 3
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 my-3 d-none d-lg-block d-sm-none">
+                <div class="card">
+                    <a href="#" target="_blank" title="Robot">
+                        <img class="card-img-top" src="img/nftimg/robbot/robbo4.jpg" alt="Card image cap">
+                    </a>
+                <div class="card-block p-2">
+                    <h6>
+                        Cetanica
+                    </h6>
+                    <p>
+                        3000€/5000 Cyptotokens
+                    </p>
+                    <button type="button" class="btn btn-danger">
+                            Comprar 
+                        <span class="badge badge-light">
+                            Stock: 2
+                        </span>
+                    </button>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- segunda colección--> 
+        <div class="row">
+            <div class="col-5 banner bg-primary">
+                <div class="h1" id="mon">
+                    Monsters      
+                </div> 
+            </div>
+            <!-- pequeño botón que nos llevara hacia el comienzo--> 
+            <div class="col-2 col-md-1 banner bg-primary">
+                <a class="btn btn-light text-right my-2" title="sube para arriba!" href="#marketplace" role="button">UP!</a> 
+            </div>
+        </div> 
+
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/monster/monster.png" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger" disabled>
+                            Comprar 
+                            <span class="badge badge-light">
+                                VENDIDO
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/monster/monster2.png" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/monster/monster3.png" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 my-3 d-none d-lg-block d-sm-none">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/monster/monster4.png" alt="Card image cap">
+                    </a>
+                <div class="card-block p-2">
+                    <h6>
+                        Cetanica
+                    </h6>
+                    <p>
+                        3000€/5000 Cyptotokens
+                    </p>
+                    <button type="button" class="btn btn-danger">
+                            Comprar 
+                        <span class="badge badge-light">
+                            Stock: 2
+                        </span>
+                    </button>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- tercera colección--> 
+        <div class="row">
+            <div class="col-5 banner bg-primary">
+                <div class="h1" id="cry">
+                    Crystal      
+                </div> 
+            </div>
+            <!-- pequeño botón que nos llevara hacia el comienzo--> 
+            <div class="col-2 col-md-1 banner bg-primary">
+                <a class="btn btn-light text-right my-2" title="sube para arriba!" href="#marketplace" role="button">UP!</a> 
+            </div>
+        </div> 
+
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Crystal">
+                        <img class="card-img-top" src="img/nftimg/crystal/Crystal.png" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger" disabled>
+                            Comprar 
+                            <span class="badge badge-light">
+                                VENDIDO
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Crystal">
+                        <img class="card-img-top" src="img/nftimg/crystal/crystal2.png" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3 my-3">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters">
+                        <img class="card-img-top" src="img/nftimg/crystal/crystal3.png" alt="Card image cap">
+                    </a>
+                    <div class="card-block p-2">
+                        <h6>
+                            Cetanica
+                        </h6>
+                        <p>
+                            3000€/5000 Cyptotokens
+                        </p>
+                        <button type="button" class="btn btn-danger">
+                            Comprar 
+                            <span class="badge badge-light">
+                                Stock: 2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 my-3 d-none d-lg-block d-sm-none">
+                <div class="card">
+                    <a href="#" target="_blank" title="Monsters" class="pad">
+                        <img class="card-img-top" src="img/nftimg/crystal/crystal4.png" alt="Card image cap">
+                    </a>
+                <div class="card-block p-2">
+                    <h6>
+                        Cetanica
+                    </h6>
+                    <p>
+                        3000€/5000 Cyptotokens
+                    </p>
+                    <button type="button" class="btn btn-danger">
+                            Comprar 
+                        <span class="badge badge-light">
+                            Stock: 2
+                        </span>
+                    </button>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- el footer --> 
+        <footer class="row">
+            <div class="col text-center banner bg-primary">
+                <p>
+                    NFTs Warehouse World 2021
+                </p>
+                <div class="w-100 d-block" >
+                    <div class="row">
+                        <div class="col-4 offset-4 mb-2">
+                            <div class="row">
+                                <div class="col-4 col-md-2 offset-md-3 ">
+                                    <a href="#" target="_blank" title="Facebook">
+                                        <img src="img/icons/facebook.png">
+                                    </a>
+                                </div>
+                                <div class="col-4 col-md-2">
+                                    <a href="#" target="_blank" title="twitter">
+                                        <img src="img/icons/twitter.png">
+                                    </a>
+                                </div>
+                                <div class="col-4 col-md-2 ">
+                                    <a href="#" target="_blank" title="Youtube">
+                                        <img src="img/icons/youtube.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </footer> 
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

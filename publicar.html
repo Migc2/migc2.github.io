@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon"  href="img/icons/nft.png"/>
+<title>Warehouse World: Publicar</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- logotipo -->  
+        <div class="row">
+            <div class="col-8 ">
+                <img src="img/icons/logo.svg">
+            </div>
+        </div>
+        <!-- navbar -->  
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                      
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark mx-2 my-2 my-xm-0 text-white" role="button" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link btn btn-dark mx-2 my-2 my-xm-0 text-white" role="button" href="market.html">Market</a>
+                            </li>
+                        </ul>
+                        
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search">
+
+                        
+                        <button type="button" class="btn btn-outline-light x-2 my-2 my-sm-0" data-toggle="modal" data-target="#loginuser" data-whatever="@mdo">
+                            Iniciar sesión
+                        </button>
+
+                        
+                        <div class="modal fade" id="loginuser" tabindex="-1" role="dialog" aria-labelledby="loginuser" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    
+                                  <h5 class="modal-title" id="loginuser">
+                                      Iniciar sesión
+                                    </h5>
+                                    
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+
+                                <div class="modal-body">
+                                  <form action="contacto.php" method="POST">
+                                       
+                                    <div class="form-group my-2">
+                                      <label for="recipient-name" class="col-form-label mx-2">email </label>
+                                      <input type="text" class="form-control" id="recipient-name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                    </div>
+
+
+                                    <div class="form-group my-2">
+                                      <label for="message-text" class="col-form-label mx-2">contraseña </label>
+                                      <input type="text" class="form-control" id="recipient-name" pattern="[A-Za-z0-9!?-]{4,8}" required>
+                                    </div>
+                                  </form>
+                                </div>
+
+                                <div class="modal-footer">
+                                  <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline-light mx-2 my-2 my-sm-0 bg-danger" type="submit">
+                            registrarse
+                        </button>
+                      </form>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <!-- aquí empieza el contenido de la seción publicar -->  
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-12 my-3">
+                <div class="row">
+                    <!-- el primer elemento es un texto explicativo para los usuarios que quieran publicar en la web -->  
+                    <div class="col-lg-6">
+                        <h2>¡Dejalo todo en nuestras manos!</h2>
+                        <p>
+                            Todo artista tiene el sueño de vender en el momento del lanzamiento de su obra. 
+                            Somos un equipo dedicado que cuidará de tus nuevas creaciones para obtener los 
+                            mejores resultados, ayudamos a nuestros artistas a alcanzar sus objetivos 
+                            haciendo llegar su obra al máximo de público posible. Llegando a darle el valor que 
+                            realmente merece tu obra y construyendo fuertes conexiones en el mundo NFT.
+                            Aparte de los amplios beneficios que se pueden alcanzar ya que este mercado esta en 
+                            constante evolución y no para de CRECER, es la oportunidad perfecta de dar un paso hacia el futuro
+                            No esperes que otros te lo cuenten ¡únete!
+                        </p>
+                    </div>
+                
+
+                    <!-- video informativo de lo que se consigue publicando en la web -->  
+                    <div class="col-lg-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/UmeMwdNG-Sk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- aqui comienza la ultima zona informativa que explica las ventajas de publicar en la web -->  
+            <div class="col-12 col-md-6 col-lg-12 my-3">
+                <div class="row">
+                    <div class="col-12 col-lg-4 offset-lg-4 banner bg-primary">
+                        <div class="h5 text-center">
+                            ¿Porqué confiar en nosotros?
+                        </div> 
+                        
+                    </div>
+                </div> 
+                
+                <!-- cada elemento es una clase card con un icono y una escueta frase -->
+                <!-- primer elemento -->   
+                <div class="row">
+                    <div class="col-12  col-lg-4 my-3">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-2  m-2">
+                                    
+                                    <img class="card-img-top" src="img/icons/gratis.png" alt="Card image cap">
+                                    
+                                </div>
+                                <div class="col-9 my-3">
+                                    <em>
+                                        Guardado de proyectos gratis
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- segundo elemento --> 
+                    <div class="col-12  col-lg-4 my-3">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-2  m-2">
+                                    
+                                    <img class="card-img-top" src="img/icons/support.png" alt="Card image cap">
+                                    
+                                </div>
+                                <div class="col-9 my-3">
+                                    <em>
+                                        Total soporte 24h
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tercer elemento --> 
+                    <div class="col-12  col-lg-4 my-3">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-2  m-2">
+                                    
+                                    <img class="card-img-top" src="img/icons/bars.png" alt="Card image cap">
+                                    
+                                </div>
+                                <div class="col-9 my-3">
+                                    <em>
+                                        Altos niveles de visualización
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cuarto elemento --> 
+                    <div class="col-12  col-lg-4 my-3">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-2  m-2">
+                                    
+                                    <img class="card-img-top" src="img/icons/event.png" alt="Card image cap">
+                                    
+                                </div>
+                                <div class="col-9 my-3">
+                                    <em>
+                                        Gestiona tus propios eventos
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- quinto elemento --> 
+                    <div class="col-12  col-lg-4 my-3">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-2  m-2">
+                                    
+                                    <img class="card-img-top" src="img/icons/update.png" alt="Card image cap">
+                                    
+                                </div>
+                                <div class="col-9 my-3">
+                                    <em>
+                                        Actualización de tendencias
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sexto elemento --> 
+                    <div class="col-12  col-lg-4 my-3">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-2  m-2">
+                                    
+                                    <img class="card-img-top" src="img/icons/hand.png" alt="Card image cap">
+                                    
+                                </div>
+                                <div class="col-9 my-3">
+                                    <em>
+                                        Promoción de tus obras
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div> 
+                <!-- al final de toda la información mostrada se encuentra el boton para regristrar y subir algunas obras para expner en la web --> 
+                <div class="text-center">
+                    <a class="btn btn-danger" href="formulario.html" role="button">
+                        ¡Empieza a publicar!
+                    </a>
+                </div>
+              
+                
+            </div>
+        </div>
+
+        
+
+        <!-- el footer --> 
+        <footer class="row">
+            <div class="col text-center banner bg-primary">
+                <p>
+                    NFTs Warehouse World 2022
+                </p>
+                <div class="w-100 d-block" >
+                    <div class="row">
+                        <div class="col-4 offset-4 mb-2">
+                            <div class="row">
+                                <div class="col-4 col-md-2 offset-md-3 ">
+                                    <a href="#" target="_blank" title="Facebook">
+                                        <img src="img/icons/facebook.png">
+                                    </a>
+                                </div>
+                                <div class="col-4 col-md-2">
+                                    <a href="#" target="_blank" title="twitter">
+                                        <img src="img/icons/twitter.png">
+                                    </a>
+                                </div>
+                                <div class="col-4 col-md-2 ">
+                                    <a href="#" target="_blank" title="Youtube">
+                                        <img src="img/icons/youtube.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </footer> 
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
